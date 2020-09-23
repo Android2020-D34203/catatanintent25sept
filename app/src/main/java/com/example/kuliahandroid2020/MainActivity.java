@@ -2,6 +2,7 @@ package com.example.kuliahandroid2020;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -33,8 +34,12 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void gantiTeksKedua(View v){
-        textView.setText("Reset dari tombol reset");
-        textView2.setText("Reset textview2");
+        Intent i = new Intent(MainActivity.this, SecondActivity.class);
+        i.putExtra("kuliah", "android 2020");
+        i.putExtra("umur", 20);
+        startActivity(i);
+//        textView.setText("Reset dari tombol reset");
+//        textView2.setText("Reset textview2");
     }
 
 }
